@@ -1,4 +1,6 @@
-const Header = () => {
+const Header = ({
+    navigationChangeHandler,
+}) => {
 
     const onHeaderClick = (e) => {
         e.preventDefault();
@@ -6,8 +8,8 @@ const Header = () => {
         if (e.target.tagName == 'A'){
             
             let url = new URL(e.target.href)
+            navigationChangeHandler(url.pathname)
 
-            console.log(url.pathname);
         }
     }
 return (
