@@ -3,7 +3,7 @@ import { useState, createElement } from "react";
 import CreateGame from "./components/CreateGame";
 import Header from "./components/Header";
 import WelcomeWorld from "./components/WelcomeWorld";
-import GameCatalog from "./components/GameCatalog";
+import GameCatalog from "./components/GameCatalog/GameCatalog";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ErrorPage from "./components/ErrorPage";
