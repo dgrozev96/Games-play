@@ -4,6 +4,9 @@ import CreateGame from "./components/CreateGame";
 import Header from "./components/Header";
 import WelcomeWorld from "./components/WelcomeWorld";
 import GameCatalog from "./components/GameCatalog";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const [page, setPage] = useState('/home');
@@ -11,6 +14,9 @@ function App() {
     '/home': <WelcomeWorld />,
     '/games': <GameCatalog />,
     '/create-game': <CreateGame />,
+    '/login': <Login />,
+    '/register': <Register />,
+
   }
 
   const navigationChangeHandler = (path) => {
@@ -27,7 +33,7 @@ function App() {
 
 
       <main id="main-content">
-        {routes[page] || <h2>No page found</h2>}
+        {routes[page] || <ErrorPage />}
       </main>
 
     </div>
